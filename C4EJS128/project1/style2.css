@@ -1,69 +1,83 @@
-* { padding: 0px; margin: 0px; font-family: 'Times New Roman', Times, serif; }
+* { padding: 0px; margin: 0px; font-family: 'Times New Roman', Times, serif; box-sizing: border-box; }
 
-body style{
-    background-color: plum;
+ul{
+    list-style-type: none;
 }
+
+
 .container{
-    width: 980px;
+    width: 1300px;
     margin: 0 auto;
-    /* background-image: url("https://cdn.pixabay.com/photo/2021/02/08/18/12/bamboo-5995884_1280.jpg;"); */
+    
     
 
 }
 header{
-    width: 980px;
-    height: 100px;
+    width: 1200px;
+    height: 200px;
     background: #b5727200;
     padding-block: 10px;
 }
 
 .header_logo{
     font-family: 'Fredericka the Great', cursive;
-font-size: 65px; padding-left: 5%;
+font-size: 75px; padding-left: 5%;
 color: aliceblue;}
 
- header .menu ul{
-     list-style: none;
-     padding-left: 50%;
-     margin-top: -50px;
- }
+.nav{margin-left: 65%;margin-top: -8%;}
 
- header .menu ul li{
-     float: left;
-     line-height: 35px;
-     padding: 0 15px;
-     
+.menu{display: flex;margin-top: 40px;column-gap: 35px;font-size: 20px;color: whitesmoke;font-family: 'Monoton', cursive;}
 
- }
+.menu-item{cursor: pointer;}
 
- header .menu ul li a{
-     color: aliceblue;
-     font-size: 20px;
-     text-decoration: none;
-     position:relative;
-    
- }
+.menu-item submenu{}
 
- header .menu ul li a::after {
-     content: "";
-     height: 5px;
-     width: 0px;
-     background: whitesmoke;
-     position:absolute;
-     bottom: 0px;
-     left: 0;
-     transition: all 0.5s ease-in-out;
+.submenu:hover{
 
- }
+}
 
- header .menu ul li a:hover::after{
-     width: 50px;
-     transform: translateX(100%);
+.submenu:hover .submenu-content{
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    padding: 12px;
+    background: whitesmoke;
+    border-radius: 6px;
 
- } 
 
- img{
+}
+
+.submenu-title{
+
+}
+
+.submenu-content{
+
+opacity: 0;
+visibility: inherit;
+transition: all .2s ease;
+color: black;font-size: 15px;}
+
+.submenu-content:hover{}
+
+.submenu-content:hover .submenu-item{
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    padding: 5px;
+    background: gainsboro;
+    border-radius: 2px;
+}
+
+.submenu-item{}
+
+table img{
     width: 50%;
     
     background-color: black;
- margin-right: -490px;margin-top: -5%;}
+ margin-right: -650px;margin-top: -3%;}
+
