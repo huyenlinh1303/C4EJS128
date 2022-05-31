@@ -16,10 +16,10 @@
     <button>Click</button>
     
     <div id="results">
-        Hãy nhập a và b
+        Hay nhap a va b
     </div>
     <script>
-        function soNguyenToGiuaAvaB(a, b) {
+        function soNguyenToGiuaavab(a, b) {
             var output = [];
 
             for (var n = a; n <= b; n++) {
@@ -50,11 +50,11 @@
             var b = document.querySelector('#b').value;
             var results = document.querySelector('#results');
 
-            var t = soNguyenToGiuaAvaB(Number(a), Number(b))
+            var t = soNguyenToGiuaavab(Number(a), Number(b))
 
             console.log(t);
 
-            results.innerText = 'Số nguyên tố giữa ' + a + ' và ' + b + ' là ' + t;
+            results.innerText = 'So nguyen to giua ' + a + ' và ' + b + ' là ' + t;
         }
 
         document.querySelector('button').addEventListener('click', click);
