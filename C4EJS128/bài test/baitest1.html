@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>baitest1</title>
+</head>
+<body>
+    a 
+    <input type = "text" id = "a"><br>
+    b 
+    <input type = "text" id = "b">
+    <button>Click</button>
+    <div id = "results">
+        Hay nhap a va b
+    </div>
+    <script>
+        function  songuyentogiuaavab(a,b) {
+            var output = [];
+            for (var n=a; n<=b; n++){
+                var f = true;
+                if(n<2){
+                    f=false;
+                } else {
+                    for(var i = 2; i<n-1; i++){
+                        if(n% i == 0) {
+                            f=false;
+                            break;
+                        }
+                    }
+                }
+                if (f){
+                    ouput.push(n) 
+                }
+                
+                    
+            }
+            return output;
+                
+            
+        }
+
+        function click(){
+            var a= document.querySelector('#a').value;
+            var b= document.querySelector('#b').value;
+            var results= document.querySelector('#results');
+            var t= songuyentogiuaavab(Number(a),Number(b))
+            console.log(t);
+            results.innerText = "So nguyen to giua" + a + "va" + b +"la" + t;
+        }
+        document.querySelector('button').addEventListener('click',click);
+
+    
+        
+        
+        
+            
+        
+    </script>
+    
+</body>
+</html>
